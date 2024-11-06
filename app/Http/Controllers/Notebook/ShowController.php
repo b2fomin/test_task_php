@@ -7,8 +7,7 @@ use App\Models\Notebook;
 
 class ShowController extends BaseController
 {
-    public function __invoke(ShowRequest $request) {
-        $data = $request->validated();
-        return $this->service->show($data['id']);
+    public function __invoke(int $id) {
+        return $this->service->show($id);
     }
 }

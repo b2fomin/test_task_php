@@ -22,7 +22,6 @@ class EditRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'id' => 'uuid|required',
             'full_name' => 'string',
             'company' => 'string',
             'phone_number' => 'string',

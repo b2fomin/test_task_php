@@ -9,6 +9,6 @@ class BaseController extends Controller {
     protected NotebookService $service;
 
     public function __construct(NotebookService $service) {
-        $this->$service = $service;
+        $this->service = $service;
     }
 }

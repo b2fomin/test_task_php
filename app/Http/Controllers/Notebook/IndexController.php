@@ -19,6 +19,11 @@ class IndexController extends BaseController
             $per_page = $data['per_page'];
             unset($data['per_page']);
         }
-        return Notebook::paginate(perPage: $per_page, page: $page);
+        try {
+            dd(123);
+            return Notebook::paginate(perPage: $per_page, page: $page);
+        } catch (\Exception $e) {
+            return response()->json(['success'=>False, 'err_msg'=>$e]);
+        }
     }
 }
