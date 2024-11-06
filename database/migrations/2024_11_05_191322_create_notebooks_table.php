@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('company');
             $table->string('phone_number');
             $table->string('email');
-            $table->time('date_birth')->default(time());
+            $table->time('date_of_birth')->default(time());
             $table->binary('photo');
             $table->timestamps();
         });

@@ -11,7 +11,7 @@ class Notebook extends Model
         'company',
         'phone_number',
         'email',
-        'date_birth',
+        'date_of_birth',
         'photo'
     ];
 }
