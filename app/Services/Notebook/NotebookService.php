@@ -15,7 +15,13 @@ class NotebookService
     }
 
     public function show(int $id) {
-        return Notebook::findOrFail($id);
+        return Notebook::findOrFail($id, [
+        'full_name',
+        'company',
+        'phone_number',
+        'email',
+        'date_of_birth',
+        'photo']);
     }
 
     public function delete(int $id) {
@@ -23,7 +29,13 @@ class NotebookService
     }
 
     public function index() {
-        return Notebook::all();
+        return Notebook::all(columns: [
+        'full_name',
+        'company',
+        'phone_number',
+        'email',
+        'date_of_birth',
+        'photo']);
     }
 };
 

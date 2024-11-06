@@ -20,7 +20,6 @@ class IndexController extends BaseController
             unset($data['per_page']);
         }
         try {
-            dd(123);
             return Notebook::paginate(perPage: $per_page, page: $page);
         } catch (\Exception $e) {
             return response()->json(['success'=>False, 'err_msg'=>$e]);
